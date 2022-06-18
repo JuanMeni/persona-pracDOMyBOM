@@ -16,11 +16,108 @@
     <title>Ejercicio 2 del practico DOM y BOM</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="container py-5">
+      <h1 class="display-1 text-center">Formulario de personas</h1>
+      <hr />
+    </header>
+    <main class="container">
+      <section class="text-center">
+        <form class="my-3 bg-light rounded p-3">
+          <!-- nombre, edad, DNI, sexo, peso, altura, anioNacimiento -->
+          <div>
+            <label for="nombre" class="form-label d-block text-start"
+              >Ingrese su nombre</label
+            >
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="edad" class="form-label d-block text-start"
+              >Ingrese su edad</label
+            >
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                id="edad"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="dni" class="form-label d-block text-start"
+              >Ingrese su DNI</label
+            >
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                id="dni"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="sexo" class="form-label d-block text-start"
+              >Ingrese su sexo</label
+            >
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                id="sexo"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="peso" class="form-label d-block text-start"
+              >Ingrese su peso en kg</label
+            >
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                id="peso"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="altura" class="form-label d-block text-start"
+              >Ingrese su altura en cm</label
+            >
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                id="altura"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="anioNacimiento" class="form-label d-block text-start"
+              >Ingrese su año de nacimiento</label
+            >
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                id="anioNacimiento"
+              />
+            </div>
+          </div>
+          <div class="d-flex my-3">
+            <button class="btn btn-outline-info" type="button" onclick="">Mostrar generacion</button>
+            <button class="btn btn-outline-info" type="button" onclick="">¿Es mayor de edad?</button>
+          </div>
+        </form>
+      </section>
+    </main>
     <footer class="bg-dark text-light text-center py-5">
-        <p>&copy; Todos los derechos reservados</p>
-      </footer>
+      <p>&copy; Todos los derechos reservados</p>
+    </footer>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
