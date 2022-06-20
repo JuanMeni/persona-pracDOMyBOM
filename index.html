@@ -108,14 +108,16 @@
               />
             </div>
           </div>
-          <div class="d-flex my-3">
-            <button class="btn btn-outline-info" type="button" onclick="">Mostrar generacion</button>
-            <button class="btn btn-outline-info" type="button" onclick="">¿Es mayor de edad?</button>
+          <div class="d-flex justify-content-evenly my-3">
+            <button class="btn btn-outline-info" type="button" onclick="btnGeneracion()">Mostrar generación</button>
+            <button class="btn btn-outline-info" type="button" onclick="btnEdad()">¿Es mayor de edad?</button>
           </div>
         </form>
+        <div class="alert" role="alert" id="mostrarGeneracion"></div>
+        <div class="alert" role="alert" id="mayorEdad"></div>
       </section>
     </main>
-    <footer class="bg-dark text-light text-center py-5">
+    <footer class="bg-dark text-center text-light py-5">
       <p>&copy; Todos los derechos reservados</p>
     </footer>
     <!-- JavaScript Bundle with Popper -->
