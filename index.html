@@ -17,22 +17,22 @@
   </head>
   <body>
     <header class="container py-5">
-      <h1 class="display-1 text-center">Formulario de personas</h1>
+      <h1 class="display-1 text-light text-center">Formulario de personas</h1>
       <hr />
     </header>
     <main class="container">
       <section class="text-center">
         <form class="my-3 bg-light rounded p-3">
-          <!-- nombre, edad, DNI, sexo, peso, altura, anioNacimiento -->
           <div>
             <label for="nombre" class="form-label d-block text-start"
-              >Ingrese su nombre</label
+              >Ingrese su nombre completo</label
             >
             <div>
               <input
                 type="text"
                 class="form-control"
                 id="nombre"
+      
               />
             </div>
           </div>
@@ -45,6 +45,7 @@
                 type="number"
                 class="form-control"
                 id="edad"
+                
               />
             </div>
           </div>
@@ -57,6 +58,7 @@
                 type="number"
                 class="form-control"
                 id="dni"
+                
               />
             </div>
           </div>
@@ -108,9 +110,12 @@
               />
             </div>
           </div>
-          <div class="d-flex justify-content-evenly my-3">
+          <!-- <div class="d-flex justify-content-evenly my-3">
             <button class="btn btn-outline-info" type="button" onclick="btnGeneracion()">Mostrar generación</button>
             <button class="btn btn-outline-info" type="button" onclick="btnEdad()">¿Es mayor de edad?</button>
+          </div> -->
+          <div class="d-flex justify-content-center my-3">
+            <button class="btn btn-outline-warning" type="button" onclick="agregarPersona()">Agregar persona</button>
           </div>
         </form>
         <div class="alert" role="alert" id="mostrarGeneracion"></div>
