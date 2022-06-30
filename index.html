@@ -21,105 +21,99 @@
       <hr />
     </header>
     <main class="container">
-      <section class="text-center">
-        <form class="my-3 bg-light rounded p-3">
-          <div>
-            <label for="nombre" class="form-label d-block text-start"
-              >Ingrese su nombre completo</label
-            >
+      <section class="row">
+        <aside>
+          <form class="my-3 bg-light rounded p-3" id="formulario">
             <div>
+              <label for="nombre"
+                >Ingrese su nombre completo *</label
+              >
               <input
-                type="text"
-                class="form-control"
-                id="nombre"
-      
-              />
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                />
+                <div class="invalid-feedback">
+                  Ingrese los datos correspondientes.
+              </div>
             </div>
-          </div>
-          <div>
-            <label for="edad" class="form-label d-block text-start"
-              >Ingrese su edad</label
-            >
             <div>
+              <label for="edad"
+                >Ingrese su edad *</label
+              >
               <input
-                type="number"
-                class="form-control"
-                id="edad"
-                
-              />
+                  type="number"
+                  class="form-control"
+                  id="edad"
+                  
+                />
+                <div class="invalid-feedback">
+                  Ingrese los datos correspondientes.
+              </div>
             </div>
-          </div>
-          <div>
-            <label for="dni" class="form-label d-block text-start"
-              >Ingrese su DNI</label
-            >
             <div>
+              <label for="dni"
+                >Ingrese su DNI</label
+              >
               <input
-                type="number"
-                class="form-control"
-                id="dni"
-                
-              />
+                  type="number"
+                  class="form-control"
+                  id="dni"
+                  
+                />
             </div>
-          </div>
-          <div>
-            <label for="sexo" class="form-label d-block text-start"
-              >Ingrese su sexo</label
-            >
             <div>
-              <input
-                type="text"
-                class="form-control"
-                id="sexo"
-              />
-            </div>
-          </div>
-          <div>
-            <label for="peso" class="form-label d-block text-start"
-              >Ingrese su peso en kg</label
-            >
+              <label for="sexo"
+                >Ingrese su sexo</label
+              >
+              <select id="sexo" class="form-control">
+                <option value="">Seleccione una opcion</option>
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+                <option value="O">Otros</option>
+              </select>
+              </div>
             <div>
+              <label for="peso"
+                >Ingrese su peso<small class="text-muted"> (kg)</small></label
+              >
               <input
-                type="number"
-                class="form-control"
-                id="peso"
-              />
+                  type="text"
+                  class="form-control"
+                  id="peso"
+                />
             </div>
-          </div>
-          <div>
-            <label for="altura" class="form-label d-block text-start"
-              >Ingrese su altura en cm</label
-            >
             <div>
+              <label for="altura"
+                >Ingrese su altura<small class="text-muted"> (mts)</small></label
+              >
               <input
-                type="number"
-                class="form-control"
-                id="altura"
-              />
+                  type="text"
+                  class="form-control"
+                  id="altura"
+                />
             </div>
-          </div>
-          <div>
-            <label for="anioNacimiento" class="form-label d-block text-start"
-              >Ingrese su año de nacimiento</label
-            >
             <div>
+              <label for="anio"
+                >Ingrese su año de nacimiento *</label
+              >
               <input
-                type="number"
-                class="form-control"
-                id="anioNacimiento"
-              />
+                  type="number"
+                  class="form-control"
+                  id="anio"
+                />
+                <div class="invalid-feedback">
+                  Ingrese los datos correspondientes.
+              </div>
             </div>
-          </div>
-          <!-- <div class="d-flex justify-content-evenly my-3">
-            <button class="btn btn-outline-info" type="button" onclick="btnGeneracion()">Mostrar generación</button>
-            <button class="btn btn-outline-info" type="button" onclick="btnEdad()">¿Es mayor de edad?</button>
-          </div> -->
-          <div class="d-flex justify-content-center my-3">
-            <button class="btn btn-outline-warning" type="button" onclick="agregarPersona()">Agregar persona</button>
-          </div>
-        </form>
-        <div class="alert" role="alert" id="mostrarGeneracion"></div>
-        <div class="alert" role="alert" id="mayorEdad"></div>
+            <div class="d-flex justify-content-center my-3">
+              <button class="btn btn-outline-warning" type="submit">Agregar persona</button>
+            </div>
+          </form>
+        </aside>
+      </section>
+      <section>
+        <table class="table bg-light rounded d-none" id="tabla"></table>
       </section>
     </main>
     <footer class="bg-dark text-center text-light py-5">
@@ -131,6 +125,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
-    <script src="js/ejercicio2-pracDom.js"></script>
+    <script src="js/ejercicio2-pracDom.js" type="module"></script>
   </body>
 </html>

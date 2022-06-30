@@ -52,4 +52,54 @@ Luego crea la interfaz necesaria para que el usuario pueda crear un objeto perso
 //     }
 // }
 
+import { validarAltura, validarAnio, validarDni, validarEdad, validarNombre, validarPeso, validarSexo } from "./validaciones.js";
+import Persona from './classPersona.js'
 
+let nombre = document.getElementById('nombre');
+let edad = document.getElementById('edad');
+let dni = document.getElementById('dni');
+let sexo = document.getElementById('sexo');
+let peso = document.getElementById('peso');
+let altura = document.getElementById('altura');
+let anio = document.getElementById('anio');
+let formulario = document.getElementById('formulario');
+let tabla = document.querySelector('#tabla')
+
+nombre.addEventListener('blur', ()=>{validarNombre(2,40, nombre)});
+edad.addEventListener('blur', ()=>{validarEdad(edad)});
+dni.addEventListener('blur', ()=>{validarDni(dni)});
+sexo.addEventListener('change', ()=>{validarSexo(sexo)});
+peso.addEventListener('blur', ()=>{validarPeso(peso)});
+altura.addEventListener('blur', ()=>{validarAltura(altura)});
+anio.addEventListener('keyup', ()=>{validarAnio(anio)});
+anio.addEventListener('blur', ()=>{validarAnio(anio)});
+formulario.addEventListener('submit', crearPersona);
+
+function crearPersona(e){
+    e.preventDefault()
+    if(validarNombre(2,40, nombre) && validarEdad(edad) && validarDni(dni) && validarSexo(sexo) && validarPeso(peso) && validarAltura(altura) && validarAnio(anio)){
+        let nuevaPersona = new Persona(nombre.value, edad.value, dni.value, sexo.value, peso.value, altura.value, anio.value)
+        console.log(nuevaPersona)
+        tabla.className = 'table bg-light rounded'
+        tabla.innerHTML = `<thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Generacion</th>
+          <th scope="col">¿Es mayor de edad?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>${nombre.value}</td>
+          <td>${edad.value}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>`
+    }else{
+        tabla.className = 'table bg-light rounded d-none'
+    }
+}
