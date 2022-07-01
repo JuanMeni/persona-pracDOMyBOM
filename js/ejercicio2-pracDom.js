@@ -58,7 +58,6 @@ function crearPersona(e){
           <th scope="col">Genero</th>
           <th scope="col">Peso</th>
           <th scope="col">Altura</th>
-          <th scope="col">Año</th>
         </tr>
       </thead>
       <tbody>
@@ -69,7 +68,6 @@ function crearPersona(e){
           <td>${sexo.value}</td>
           <td>${peso.value}kg</td>
           <td>${altura.value}mts</td>
-          <td>${anio.value}</td>
         </tr>
       </tbody>`
       btnGeneracion.className = 'btn btn-warning my-3'
