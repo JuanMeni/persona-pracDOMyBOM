@@ -64,6 +64,9 @@ let altura = document.getElementById('altura');
 let anio = document.getElementById('anio');
 let formulario = document.getElementById('formulario');
 let tabla = document.querySelector('#tabla')
+let btnGeneracion = document.getElementById('btnGeneracion')
+let btnEdad = document.getElementById('btnEdad')
+
 
 nombre.addEventListener('blur', ()=>{validarNombre(2,40, nombre)});
 edad.addEventListener('blur', ()=>{validarEdad(edad)});
@@ -80,25 +83,33 @@ function crearPersona(e){
     if(validarNombre(2,40, nombre) && validarEdad(edad) && validarDni(dni) && validarSexo(sexo) && validarPeso(peso) && validarAltura(altura) && validarAnio(anio)){
         let nuevaPersona = new Persona(nombre.value, edad.value, dni.value, sexo.value, peso.value, altura.value, anio.value)
         console.log(nuevaPersona)
+        btnGeneracion.addEventListener('click', ()=>{nuevaPersona.mostrargeneracion()})
+        btnEdad.addEventListener('click', ()=>{nuevaPersona.esMayorDeEdad()})
         tabla.className = 'table bg-light rounded'
         tabla.innerHTML = `<thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Edad</th>
-          <th scope="col">Generacion</th>
-          <th scope="col">¿Es mayor de edad?</th>
+          <th scope="col">DNI</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Altura</th>
+          <th scope="col">Año</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
           <td>${nombre.value}</td>
-          <td>${edad.value}</td>
-          <td></td>
-          <td></td>
+          <td>${dni.value}</td>
+          <td>${sexo.value}</td>
+          <td>${peso.value}kg</td>
+          <td>${altura.value}mts</td>
+          <td>${anio.value}</td>
         </tr>
       </tbody>`
+      btnGeneracion.className = 'btn btn-warning my-3'
+      btnEdad.className = 'btn btn-warning my-3'
     }else{
         tabla.className = 'table bg-light rounded d-none'
     }

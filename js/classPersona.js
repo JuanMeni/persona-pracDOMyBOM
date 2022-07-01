@@ -1,33 +1,46 @@
 export default class Persona {
-    constructor(nombre,edad,dni,sexo,peso,altura,anioNacimiento){
+    constructor(nombre,edad,dni,sexo,peso,altura,anio){
         this.nombre=nombre;
         this.edad=edad;
         this.dni=dni;
         this.sexo=sexo;
         this.peso=peso;
         this.altura=altura;
-        this.anioNacimiento=anioNacimiento;
+        this.anio=anio;
     }
     mostrargeneracion(){
-       if(this.anioNacimiento >=1994 && this.anioNacimiento<=2010){
-          document.write(`${this.nombre} pertenece a la generacion Z<br>Rasgo caracteristico:irreverencia.<br>`);
+       if(this.anio >=1994 && this.anio<=2010){
+        window.alert(`${this.nombre} nacio en ${this.anio}, pertenece a la generacion Z y su rasgo caracteristico es la irreverencia.`)
+        //   document.write(`${this.nombre} pertenece a la generacion Z<br>Rasgo caracteristico:irreverencia.<br>`);
+          return true
        }
-       if(this.anioNacimiento >=1981 && this.anioNacimiento<=1993){
-        document.write(`${this.nombre} pertenece a la generacion Y<br>Rasgo caracteristico:Frustracion.<br>`);
+       if(this.anio >=1981 && this.anio<=1993){
+        window.alert(`${this.nombre} nacio en ${this.anio}, pertenece a la generacion Y y su rasgo caracteristico es la frustracion.`)
+        // document.write(`${this.nombre} pertenece a la generacion Y<br>Rasgo caracteristico:Frustracion.<br>`);
+        return true
       }
-      if(this.anioNacimiento >=1969 && this.anioNacimiento<=1980){
-        document.write(`${this.nombre} pertenece a la generacion X<br>Su rasgo caracteristico:Obsesion por el exito.<br>`);
+      if(this.anio >=1969 && this.anio<=1980){
+        window.alert(`${this.nombre} nacio en ${this.anio}, pertenece a la generacion X y su rasgo caracteristico es la obsesion por el exito.`)
+        // document.write(`${this.nombre} pertenece a la generacion X<br>Su rasgo caracteristico:Obsesion por el exito.<br>`);
+        return true
      }
-     if(this.anioNacimiento >=1949 && this.anioNacimiento<=1968){
-        document.write(`${this.nombre} pertenece a la generacion Baby boom<br>Su rasgo caracteristico:Ambicion.<br>`);
+     if(this.anio >=1949 && this.anio<=1968){
+        window.alert(`${this.nombre} nacio en ${this.anio}, pertenece a la generacion Baby boom y su rasgo caracteristico es la ambicion.`)
+        // document.write(`${this.nombre} pertenece a la generacion Baby boom<br>Su rasgo caracteristico:Ambicion.<br>`);
+        return true
      }
-     if(this.anioNacimiento >=1930 && this.anioNacimiento<=1948){
-        document.write(`${this.nombre} pertenece a la generacion Silent Generation<br>Su rasgo caracteristico:Austeridad.<br>`);
+     if(this.anio >=1930 && this.anio<=1948){
+        window.alert(`${this.nombre} nacio en ${this.anio}, pertenece a la generacion Silent Generation y su rasgo caracteristico es la austeridad.`)
+        // document.write(`${this.nombre} pertenece a la generacion Silent Generation<br>Su rasgo caracteristico:Austeridad.<br>`);
+        return true
      }
     }
     esMayorDeEdad(){
         if(this.edad >= 18 ){
-            document.write(`${this.nombre} es mayor de edad.<br>`);
+            alert(`${this.nombre} si es mayor de edad`)
+            // document.write(`${this.nombre} es mayor de edad.<br>`);
+         }else{
+            alert(`${this.nombre} no es mayor de edad`)
          }
     }
     mostrarDatos(){
@@ -39,7 +52,7 @@ export default class Persona {
         <li>Sexo: ${this.sexo}</li>
         <li>Peso: ${this.peso}</li>
         <li>Altura: ${this.altura}</li>
-        <li>Año de nacimiento: ${this.anioNacimiento}</li>
+        <li>Año de nacimiento: ${this.anio}</li>
         <li>DNI Aleatorio generado: ${this.nuevoDni}</li>
         </ul>
         `);
